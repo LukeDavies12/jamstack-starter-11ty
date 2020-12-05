@@ -1,0 +1,40 @@
+{
+  "name": "jamstack-starter-11ty",
+  "version": "1.0.0",
+  "description": "A static website starter kit for the modern web",
+  "main": "dist/assets/main.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "serve:eleventy": "npx @11ty/eleventy --serve",
+    "serve:parcel": "cross-env NODE_ENV=development parcel watch src/js/main.js",
+    "dev": "npm-run-all clean --parallel serve:*",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:parcel": "cross-env NODE_ENV=production parcel build ./src/js/main.js",
+    "build": "npm-run-all clean build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@tailwindcss/typography": "^0.3.1",
+    "alpinejs": "^2.7.3",
+    "autoprefixer": "^10.0.4",
+    "cross-env": "^7.0.2",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-nightly.462",
+    "postcss": "^8.1.10",
+    "postcss-import": "^13.0.0",
+    "postcss-nested": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.0.1"
+  }
+}

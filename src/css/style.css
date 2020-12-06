@@ -6,7 +6,3 @@
 
 @import "tailwindcss/utilities";
 /* @import "./custom-utilities.css"; */
-
-body{
-    background: red;
-}
